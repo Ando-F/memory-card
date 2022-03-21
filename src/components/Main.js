@@ -17,17 +17,18 @@ import voldemort from '../images/Voldemort.jpg';
 export const Main = (props) => {
     const [cards, setCards] = useState({
         array: [
-        <Card image={dumbledore} name={'Albus Dumbledore'}/>,
-        <Card image={malfoy} name={'Draco Malfoy'}/>,
-        <Card image={umbridge} name={'Dolores Umbridge'}/>,
-        <Card image={harry} name={'Harry Potter'} />,
-        <Card image={hermione} name={'Hermione Granger'} />,
-        <Card image={ron} name={'Ron Weasley'} />,
-        <Card image={snape} name={'Severus Snape'} />,
-        <Card image={sirius} name={'Sirius Black'} />,
-        <Card image={voldemort} name={'Voldemort'} />
+        <Card id={1} image={dumbledore} name={'Albus Dumbledore'}/>,
+        <Card id={2} image={malfoy} name={'Draco Malfoy'}/>,
+        <Card id={3} image={umbridge} name={'Dolores Umbridge'}/>,
+        <Card id={4} image={harry} name={'Harry Potter'} />,
+        <Card id={5} image={hermione} name={'Hermione Granger'} />,
+        <Card id={6} image={ron} name={'Ron Weasley'} />,
+        <Card id={7} image={snape} name={'Severus Snape'} />,
+        <Card id={8} image={sirius} name={'Sirius Black'} />,
+        <Card id={9} image={voldemort} name={'Voldemort'} />
         ]
     });
+    const [arr, setArr] = useState([]);
 
     const shuffleArray = () => {
         let arrayAfterShuffle = cards.array;
@@ -40,10 +41,29 @@ export const Main = (props) => {
         setCards({array: arrayAfterShuffle});
     };
 
+    useEffect(() => {
+        const updateArray = (e) => {
+            if (e.target && e.target.nodeName === 'IMG') {
+                if (!arr.includes(e.target.id)) {
+                    setArr((oldArray) => oldArray.concat(e.target.id));
+                    props.increaseScore();
+                } else {
+                    props.deleteScore();
+                    setArr([]);
+                }
+            }
+        }
+
+        document.getElementById('main').addEventListener('click', updateArray);
+
+        return () => {
+            document.getElementById('main').removeEventListener('click', updateArray);
+        }
+    })
+
     return (
         <div id={'main'}>
-            {cards.array.map((Component, i) => <div className={'cardContainer'} onClick={() => {
-                props.increaseScore();
+            {cards.array.map((Component, i) => <div className={'cardContainer'} onClick={(e) => {
                 shuffleArray();
             }} key={i}>{Component}</div>)}
         </div>

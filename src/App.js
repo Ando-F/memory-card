@@ -11,10 +11,18 @@ const App = () => {
         setScore(score + 1);
     }
 
+    const deleteScore = () => {
+        setScore(0);
+    }
+
+    const updateTotalScore = () => {
+
+    }
+
     return (
         <div>
             <Header score={score} totalScore={totalScore}/>
-            <Main increaseScore={increaseScore}/>
+            <Main increaseScore={increaseScore} deleteScore={deleteScore}/>
         </div>
     )
 }
