@@ -40,27 +40,6 @@ export const Main = (props) => {
         setCards({array: arrayAfterShuffle});
     };
 
-    // useEffect(() => {
-    //     const shuffleArray = (e) => {
-    //         if (e.target && e.target.nodeName === 'IMG') {
-    //             let arrayAfterShuffle = cards.array;
-    //             for (let i = arrayAfterShuffle.length -1; i > 0; i--) {
-    //                 let j = Math.floor(Math.random() * i);
-    //                 let k = arrayAfterShuffle[i];
-    //                 arrayAfterShuffle[i] = arrayAfterShuffle[j];
-    //                 arrayAfterShuffle[j] = k;
-    //             }
-    //             setCards({array: arrayAfterShuffle});
-    //         }
-    //     };
-    //
-    //     document.getElementById('main').addEventListener('click', shuffleArray);
-    //
-    //     return () => {
-    //         document.getElementById('main').removeEventListener('click', shuffleArray);
-    //     }
-    // });
-
     return (
         <div id={'main'}>
             {cards.array.map((Component, i) => <div className={'cardContainer'} onClick={() => {
