@@ -1,0 +1,10 @@
+#main {
+  display: grid;
+  gap: 15px;
+  grid-template-columns: repeat(auto-fill, minmax(150px, 1fr));
+
+  .cardContainer {
+    width: 150px;
+    cursor: pointer;
+  }
+}

@@ -1,25 +1,22 @@
-import logo from './logo.svg';
-import './App.css';
+import React, {useState, useEffect} from "react";
 
-function App() {
-  return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
-    </div>
-  );
+import {Header} from "./components/Header";
+import {Main} from "./components/Main";
+
+const App = () => {
+    const [score, setScore] = useState(0);
+    const [totalScore, setTotalScore] = useState(0);
+
+    const increaseScore = () => {
+        setScore(score + 1);
+    }
+
+    return (
+        <div>
+            <Header score={score} totalScore={totalScore}/>
+            <Main increaseScore={increaseScore}/>
+        </div>
+    )
 }
 
 export default App;

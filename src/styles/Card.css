@@ -1,0 +1,19 @@
+.card {
+  width: 100%;
+  border: 1px solid;
+  padding: 5px;
+  border-radius: 5px;
+  display: grid;
+  justify-content: center;
+}
+.card img {
+  width: 130px;
+  height: 200px;
+  border-radius: 5px;
+}
+.card p {
+  display: grid;
+  justify-content: center;
+}
+
+/*# sourceMappingURL=Card.css.map */
