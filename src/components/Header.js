@@ -1,5 +1,6 @@
 import React from "react";
 import {Score} from "./Score";
+import '../styles/Header.css';
 
 export const Header = (props) => {
     return (

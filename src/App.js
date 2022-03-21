@@ -22,7 +22,7 @@ const App = () => {
     }
 
     return (
-        <div>
+        <div id={'app'}>
             <Header score={score} bestScore={bestScore}/>
             <Main increaseScore={increaseScore} deleteScore={deleteScore} updateTotalScore={updateTotalScore}/>
         </div>

@@ -3,6 +3,7 @@
   border: 1px solid;
   padding: 5px;
   border-radius: 5px;
+  background-color: grey;
   display: grid;
   justify-content: center;
 }
@@ -14,6 +15,7 @@
 .card p {
   display: grid;
   justify-content: center;
+  font-size: 17px;
 }
 
 /*# sourceMappingURL=Card.css.map */

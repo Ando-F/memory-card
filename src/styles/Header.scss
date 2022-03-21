@@ -1,0 +1,25 @@
+#header {
+  display: grid;
+  grid-template-columns: 400px 1fr;
+  margin-bottom: 50px;
+  background-color: grey;
+  padding: 20px;
+  border-radius: 5px;
+
+  h1 {
+    font-size: 50px;
+    margin: 0;
+  }
+
+  #score {
+    display: grid;
+    justify-content: end;
+
+    h3 {
+      margin: 0;
+      display: grid;
+      justify-content: start;
+      align-items: center;
+    }
+  }
+}

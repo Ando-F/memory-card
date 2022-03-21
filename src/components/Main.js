@@ -12,6 +12,7 @@ import ron from '../images/Ron_Weasley.jpg';
 import snape from '../images/Severus-Snape.jpg';
 import sirius from '../images/Sirius_Black.jpg';
 import voldemort from '../images/Voldemort.jpg';
+import background from '/Users/matveiv/Documents/IT/the_odin_project/memory-card/src/images/iu.jpeg';
 
 
 export const Main = (props) => {
@@ -42,8 +43,10 @@ export const Main = (props) => {
     };
 
     useEffect(() => {
+        document.body.style.backgroundImage = `url('${background}')`;
+
         const updateArray = (e) => {
-            if (e.target && e.target.nodeName === 'IMG') {
+            if (e.target.nodeName === 'IMG' || e.target.nodeName === 'DIV' || e.target.nodeName === 'P') {
                 if (!arr.includes(e.target.id)) {
                     setArr((oldArray) => oldArray.concat(e.target.id));
                     props.increaseScore();
