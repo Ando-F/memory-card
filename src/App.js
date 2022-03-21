@@ -5,7 +5,7 @@ import {Main} from "./components/Main";
 
 const App = () => {
     const [score, setScore] = useState(0);
-    const [totalScore, setTotalScore] = useState(0);
+    const [bestScore, setBestScore] = useState(0);
 
     const increaseScore = () => {
         setScore(score + 1);
@@ -16,13 +16,15 @@ const App = () => {
     }
 
     const updateTotalScore = () => {
-
+        if (score > bestScore) {
+            setBestScore(score);
+        }
     }
 
     return (
         <div>
-            <Header score={score} totalScore={totalScore}/>
-            <Main increaseScore={increaseScore} deleteScore={deleteScore}/>
+            <Header score={score} bestScore={bestScore}/>
+            <Main increaseScore={increaseScore} deleteScore={deleteScore} updateTotalScore={updateTotalScore}/>
         </div>
     )
 }

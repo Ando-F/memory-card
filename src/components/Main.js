@@ -48,6 +48,7 @@ export const Main = (props) => {
                     setArr((oldArray) => oldArray.concat(e.target.id));
                     props.increaseScore();
                 } else {
+                    props.updateTotalScore();
                     props.deleteScore();
                     setArr([]);
                 }
