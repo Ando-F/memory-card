@@ -1,0 +1,23 @@
+{
+  "files": {
+    "main.css": "/matveisch/memory-card/static/css/main.1ab953b4.css",
+    "main.js": "/matveisch/memory-card/static/js/main.ef9bffbc.js",
+    "static/media/iu.jpeg": "/matveisch/memory-card/static/media/iu.aec834bc9e980b8da1f4.jpeg",
+    "static/media/Ron-Weasle.jpeg": "/matveisch/memory-card/static/media/Ron-Weasle.44835791708429b6ba0b.jpeg",
+    "static/media/Hermione_Granger.jpeg": "/matveisch/memory-card/static/media/Hermione_Granger.5df9f65e615845aad951.jpeg",
+    "static/media/Harry_Potter.jpeg": "/matveisch/memory-card/static/media/Harry_Potter.4e4a9f83ce7343abce0a.jpeg",
+    "static/media/Dolores_Umbridge.jpg": "/matveisch/memory-card/static/media/Dolores_Umbridge.0b6f89228801a0ae8a44.jpg",
+    "static/media/Voldemort.jpg": "/matveisch/memory-card/static/media/Voldemort.a2a17d2318872033b6c8.jpg",
+    "static/media/Albus_Dumbledore.jpg": "/matveisch/memory-card/static/media/Albus_Dumbledore.f45844778f73dc5b0348.jpg",
+    "static/media/Draco-Malfoy.jpg": "/matveisch/memory-card/static/media/Draco-Malfoy.e902f73b75d07baa678e.jpg",
+    "static/media/Severus-Snape.jpg": "/matveisch/memory-card/static/media/Severus-Snape.d84a0e0a9bc3ae0558a3.jpg",
+    "static/media/Sirius_Black.jpg": "/matveisch/memory-card/static/media/Sirius_Black.9dc8314c703194785f26.jpg",
+    "index.html": "/matveisch/memory-card/index.html",
+    "main.1ab953b4.css.map": "/matveisch/memory-card/static/css/main.1ab953b4.css.map",
+    "main.ef9bffbc.js.map": "/matveisch/memory-card/static/js/main.ef9bffbc.js.map"
+  },
+  "entrypoints": [
+    "static/css/main.1ab953b4.css",
+    "static/js/main.ef9bffbc.js"
+  ]
+}
