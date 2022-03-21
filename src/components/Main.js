@@ -46,7 +46,7 @@ export const Main = (props) => {
         document.body.style.backgroundImage = `url('${background}')`;
 
         const updateArray = (e) => {
-            if (e.target.nodeName === 'IMG' || e.target.nodeName === 'DIV' || e.target.nodeName === 'P') {
+            if (e.target.nodeName === 'IMG' || e.target.nodeName === 'P' || e.target.className === 'card') {
                 if (!arr.includes(e.target.id)) {
                     setArr((oldArray) => oldArray.concat(e.target.id));
                     props.increaseScore();
